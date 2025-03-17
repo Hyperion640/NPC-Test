@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+        #result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personality Survey</h1>
+    <div class="form-container">
+        <form id="surveyForm">
+
+            <!-- Section 1: Memory -->
+            <div class="section-title">Memory</div>
+            <div class="form-group"><label>1. Do you often forget details of conversations?</label>
+                <input type="radio" name="q1" value="Yes">Yes
+                <input type="radio" name="q1" value="Maybe">Maybe
+                <input type="radio" name="q1" value="No">No
+            </div>
+            <div class="form-group"><label>2. Do you struggle to recall events from last week?</label>
+                <input type="radio" name="q2" value="Yes">Yes
+                <input type="radio" name="q2" value="Maybe">Maybe
+                <input type="radio" name="q2" value="No">No
+            </div>
+            <div class="form-group"><label>3. Do people often remind you of things you've forgotten?</label>
+                <input type="radio" name="q3" value="Yes">Yes
+                <input type="radio" name="q3" value="Maybe">Maybe
+                <input type="radio" name="q3" value="No">No
+            </div>
+
+            <!-- Section 2: Decision Making -->
+            <div class="section-title">Decision Making</div>
+            <div class="form-group"><label>4. Do you struggle making spontaneous decisions?</label>
+                <input type="radio" name="q4" value="Yes">Yes
+                <input type="radio" name="q4" value="Maybe">Maybe
+                <input type="radio" name="q4" value="No">No
+            </div>
+            <div class="form-group"><label>5. Do you prefer following plans over improvising?</label>
+                <input type="radio" name="q5" value="Yes">Yes
+                <input type="radio" name="q5" value="Maybe">Maybe
+                <input type="radio" name="q5" value="No">No
+            </div>
+            <div class="form-group"><label>6. Do you find yourself hesitating on simple choices?</label>
+                <input type="radio" name="q6" value="Yes">Yes
+                <input type="radio" name="q6" value="Maybe">Maybe
+                <input type="radio" name="q6" value="No">No
+            </div>
+
+            <!-- Section 3-10 -->
+            <div class="section-title">Social Interactions</div>
+            <div class="form-group"><label>7. Do you prefer small talk over deep conversations?</label>
+                <input type="radio" name="q7" value="Yes">Yes
+                <input type="radio" name="q7" value="Maybe">Maybe
+                <input type="radio" name="q7" value="No">No
+            </div>
+            <div class="form-group"><label>8. Do you often repeat the same phrases?</label>
+                <input type="radio" name="q8" value="Yes">Yes
+                <input type="radio" name="q8" value="Maybe">Maybe
+                <input type="radio" name="q8" value="No">No
+            </div>
+            <div class="form-group"><label>9. Do you feel awkward in unscripted social situations?</label>
+                <input type="radio" name="q9" value="Yes">Yes
+                <input type="radio" name="q9" value="Maybe">Maybe
+                <input type="radio" name="q9" value="No">No
+            </div>
+
+            <!-- Repeating for Sections 4-10 -->
+            <!-- Section 4: Problem Solving -->
+            <div class="section-title">Problem Solving</div>
+            <div class="form-group"><label>10. Do you prefer instructions over figuring things out?</label>
+                <input type="radio" name="q10" value="Yes">Yes
+                <input type="radio" name="q10" value="Maybe">Maybe
+                <input type="radio" name="q10" value="No">No
+            </div>
+            <div class="form-group"><label>11. Do you struggle when given open-ended tasks?</label>
+                <input type="radio" name="q11" value="Yes">Yes
+                <input type="radio" name="q11" value="Maybe">Maybe
+                <input type="radio" name="q11" value="No">No
+            </div>
+            <div class="form-group"><label>12. Do you often follow the same problem-solving steps?</label>
+                <input type="radio" name="q12" value="Yes">Yes
+                <input type="radio" name="q12" value="Maybe">Maybe
+                <input type="radio" name="q12" value="No">No
+            </div>
+
+            <!-- Section 5: Routine & Habits -->
+            <div class="section-title">Routine & Habits</div>
+            <div class="form-group"><label>13. Do you get uncomfortable when routines change?</label>
+                <input type="radio" name="q13" value="Yes">Yes
+                <input type="radio" name="q13" value="Maybe">Maybe
+                <input type="radio" name="q13" value="No">No
+            </div>
+            <div class="form-group"><label>14. Do you eat similar meals daily?</label>
+                <input type="radio" name="q14" value="Yes">Yes
+                <input type="radio" name="q14" value="Maybe">Maybe
+                <input type="radio" name="q14" value="No">No
+            </div>
+            <div class="form-group"><label>15. Do you take the same path when walking somewhere?</label>
+                <input type="radio" name="q15" value="Yes">Yes
+                <input type="radio" name="q15" value="Maybe">Maybe
+                <input type="radio" name="q15" value="No">No
+            </div>
+
+            <!-- Section 6: Self-Awareness -->
+            <div class="section-title">Self-Awareness</div>
+            <div class="form-group"><label>16. Do you often reflect on your past choices?</label>
+                <input type="radio" name="q16" value="Yes">Yes
+                <input type="radio" name="q16" value="Maybe">Maybe
+                <input type="radio" name="q16" value="No">No
+            </div>
+            <div class="form-group"><label>17. Do you find it hard to describe your emotions?</label>
+                <input type="radio" name="q17" value="Yes">Yes
+                <input type="radio" name="q17" value="Maybe">Maybe
+                <input type="radio" name="q17" value="No">No
+            </div>
+            <div class="form-group"><label>18. Do you rarely question why you do things?</label>
+                <input type="radio" name="q18" value="Yes">Yes
+                <input type="radio" name="q18" value="Maybe">Maybe
+                <input type="radio" name="q18" value="No">No
+            </div>
+
+            <!-- Section 7: Adaptability -->
+            <div class="section-title">Adaptability</div>
+            <div class="form-group"><label>19. Do you struggle to adapt to new environments?</label>
+                <input type="radio" name="q19" value="Yes">Yes
+                <input type="radio" name="q19" value="Maybe">Maybe
+                <input type="radio" name="q19" value="No">No
+            </div>
+            <div class="form-group"><label>20. Do you find change overwhelming?</label>
+                <input type="radio" name="q20" value="Yes">Yes
+                <input type="radio" name="q20" value="Maybe">Maybe
+                <input type="radio" name="q20" value="No">No
+            </div>
+            <div class="form-group"><label>21. Do you prefer predictable situations?</label>
+                <input type="radio" name="q21" value="Yes">Yes
+                <input type="radio" name="q21" value="Maybe">Maybe
+                <input type="radio" name="q21" value="No">No
+            </div>
+
+            <!-- Section 8: Creativity -->
+            <div class="section-title">Creativity</div>
+            <div class="form-group"><label>22. Do you struggle with thinking outside the box?</label>
+                <input type="radio" name="q22" value="Yes">Yes
+                <input type="radio" name="q22" value="Maybe">Maybe
+                <input type="radio" name="q22" value="No">No
+            </div>
+            <div class="form-group"><label>23. Do you find it hard to come up with original ideas?</label>
+                <input type="radio" name="q23" value="Yes">Yes
+                <input type="radio" name="q23" value="Maybe">Maybe
+                <input type="radio" name="q23" value="No">No
+            </div>
+            <div class="form-group"><label>24. Do you prefer copying what works over experimenting?</label>
+                <input type="radio" name="q24" value="Yes">Yes
+                <input type="radio" name="q24" value="Maybe">Maybe
+                <input type="radio" name="q24" value="No">No
+            </div>
+
+            <!-- Section 9: Free Will -->
+            <div class="section-title">Free Will</div>
+            <div class="form-group"><label>25. Do you feel like most of your actions are automatic?</label>
+                <input type="radio" name="q25" value="Yes">Yes
+                <input type="radio" name="q25" value="Maybe">Maybe
+                <input type="radio" name="q25" value="No">No
+            </div>
+            <div class="form-group"><label>26. Do you rarely stop to question what you're doing?</label>
+                <input type="radio" name="q26" value="Yes">Yes
+                <input type="radio" name="q26" value="Maybe">Maybe
+                <input type="radio" name="q26" value="No">No
+            </div>
+            <div class="form-group"><label>27. Do you feel like you follow a set path in life?</label>
+                <input type="radio" name="q27" value="Yes">Yes
+                <input type="radio" name="q27" value="Maybe">Maybe
+                <input type="radio" name="q27" value="No">No
+            </div>
+
+            <!-- Section 10: Awareness of Environment -->
+            <div class="section-title">Awareness of Environment</div>
+            <div class="form-group"><label>28. Do you often overlook small changes in your surroundings?</label>
+                <input type="radio" name="q28" value="Yes">Yes
+                <input type="radio" name="q28" value="Maybe">Maybe
+                <input type="radio" name="q28" value="No">No
+            </div>
+            <div class="form-group"><label>29. Do you rarely notice details in places you frequent?</label>
+                <input type="radio" name="q29" value="Yes">Yes
+                <input type="radio" name="q29" value="Maybe">Maybe
+                <input type="radio" name="q29" value="No">No
+            </div>
+            <div class="form-group"><label>30. Do you find it hard to recall the layout of places you've been?</label>
+                <input type="radio" name="q30" value="Yes">Yes
+                <input type="radio" name="q30" value="Maybe">Maybe
+                <input type="radio" name="q30" value="No">No
+            </div>
+<!-- Mental Health Considerations -->
+            <div class="section-title">Mental Health Considerations</div>
+            <p>(These do not affect the main score but slightly adjust the results.)</p>
+
+            <div class="form-group"><label>31. Have you been diagnosed with or suspect you have anxiety?</label>
+                <input type="radio" name="q31" value="Yes">Yes
+                <input type="radio" name="q31" value="No">No
+            </div>
+            <div class="form-group"><label>32. Have you been diagnosed with or suspect you have depression?</label>
+                <input type="radio" name="q32" value="Yes">Yes
+                <input type="radio" name="q32" value="No">No
+            </div>
+            <div class="form-group"><label>33. Have you been diagnosed with or suspect you have ADHD?</label>
+                <input type="radio" name="q33" value="Yes">Yes
+                <input type="radio" name="q33" value="No">No
+            </div>
+            <div class="form-group"><label>34. Have you been diagnosed with or suspect you have autism?</label>
+                <input type="radio" name="q34" value="Yes">Yes
+                <input type="radio" name="q34" value="No">No
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+document.getElementById('surveyForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let score = 0;
+    let totalQuestions = 30; // Total number of questions
+    let formData = new FormData(this);
+
+    formData.forEach((value, key) => {
+        if (key.startsWith("q") && parseInt(key.replace("q", "")) <= 30) { // Only count main questions
+            if (value === "Yes") score += 1;
+            else if (value === "Maybe") score += 0.5;
+        }
+    });
+
+    let percentage = (score / totalQuestions) * 100;
+
+    // Apply skew based on anxiety, depression, ADHD, and autism
+    let reduction = 0;
+    if (document.querySelector('input[name="q31"]:checked')?.value === "Yes") {
+        reduction += 2; // Anxiety
+    }
+    if (document.querySelector('input[name="q32"]:checked')?.value === "Yes") {
+        reduction += 3; // Depression
+    }
+    if (document.querySelector('input[name="q33"]:checked')?.value === "Yes") {
+        reduction += 4; // ADHD
+    }
+    if (document.querySelector('input[name="q34"]:checked')?.value === "Yes") {
+        reduction += 5; // Autism
+    }
+
+    percentage = Math.max(0, percentage - reduction); // Ensure percentage doesn't drop below 0%
+
+    let resultText = `You scored ${percentage.toFixed(1)}%. `;
+
+    if (percentage > 65) {
+        resultText += "Your responses indicate structured behavioral tendencies.";
+    } else {
+        resultText += "Your responses indicate adaptive behavioral tendencies.";
+    }
+
+    document.getElementById("result").innerText = resultText;
+});
+    </script>
+</body>
+</html>
